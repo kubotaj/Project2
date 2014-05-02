@@ -1,0 +1,41 @@
+<% include header %>
+<% include menu %>
+
+   <div id="content">
+
+        <h3>Customer List by Product</h3>
+
+        <% if(rs.length > 0) { %>
+           <table>
+                <tr>
+                <th>PuchaseDate</th>
+                <th>CustomerName</th>
+                <th>ProductName</th>
+                <th>Item</th>
+                </tr>
+                <% for (var i=0; rs.length > i; i++) { %>
+                   <tr>
+                   <td><%= rs[i].PurchaseDate %></td>
+                   <td><a href="/view/?cid=<%= rs[0].CID %>">
+		       <%= rs[i].CustomerName %></a></td>
+                   <td><%= rs[i].ProductName %></td>
+                   <td><%= rs[i].Item %></td>
+
+                   </tr>
+                   <% } %>
+           </table>
+           <% } else { %>
+           No data found.
+           <% } %>
+
+
+   </div>
+
+<style>
+th{width:100px;}
+td{width:230px;}
+</style>
+
+<% include resource %>
+<% include footer %>
+

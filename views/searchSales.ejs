@@ -1,0 +1,21 @@
+<% include header %>
+<% include menu %>
+
+   <div id="content">
+        <h3>Search by Salesperson Name</h3>
+
+        <form method="POST" action="<%= action %>">
+           <table id="product">
+              <tr><td>Salesperson Name:</td>
+              <td><input type="text" id="name" name ="name" /></td>
+              </tr>
+           </table>
+	   <br />
+           <input type="submit">
+        </form>
+
+   </div>
+
+<% include resource %>
+<% include footer %>
+

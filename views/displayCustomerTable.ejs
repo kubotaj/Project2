@@ -1,0 +1,57 @@
+<% include header %>
+<% include menu %>
+
+   <div id="content">
+
+        <h3>Search Result</h3>
+
+   <div id="table">
+	<% if(rs.length > 0) { %>
+	   <table>
+		<tr>
+		<th>Name</th>
+		<th>Street</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Zip</th>
+		<th>Phone</th>
+		</tr>
+		<% for (var i=0; rs.length > i; i++) { %>
+		   <tr>
+		   <td><a href="/update/?cid=<%= rs[i].CustomerID %>">
+		       <%= rs[i].Name %></a></td>
+		   <td><%= rs[i].Street %></td>
+		   <td><%= rs[i].City %></td>
+		   <td><%= rs[i].State %></td>
+		   <td><%= rs[i].Zip %></td>
+		   <td><%= rs[i].Phone %></td>
+		   </tr>
+		   <% } %>
+	   </table>
+
+   </div>
+ 
+	   <% } else { %>
+	   No data found.
+	   <% } %>
+
+
+   </div>
+
+
+
+<style>
+th{width:100px;}
+td{width:230px;}
+</style>
+
+<style>
+#table
+{
+font-size:xx-small;
+}
+</style>
+
+<% include resource %>
+<% include footer %>
+

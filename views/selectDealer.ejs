@@ -1,0 +1,54 @@
+<% include header %>
+<% include menu %>
+
+   <div id="content">
+   	<h3>Select Dealer Data</h3>
+
+	<div id="dealer"></div>
+	<br />
+	<input id="user-submit" type="submit" />
+	<p id="output"></p>
+
+   </div>
+
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      
+      // Once the HTML has loaded, link javascript functions to HTML elements
+      $(document).ready(function () {
+            
+                // Populate Drop Down Menu with dealer from MySQL
+                $.ajax({
+                    url: "/dealer/select",
+                    type: "POST",
+                    contentType: "application/json",
+                    processData: false,
+                    complete: function (data) {
+                        $('div#dealer').html(data.responseText);
+                    }
+                });
+            
+                // Retrieve data from MySQL for a specific user
+                $('#user-submit').click(function () {
+                    var payload = {
+                        id: $('#dealer-list').val(),
+                    };
+                    
+                    $.ajax({
+                        url: "/dealer",
+                        type: "POST",
+                        contentType: "application/json",
+                        processData: false,
+                        data: JSON.stringify(payload),
+                        complete: function (data) {
+                            $('#output').html(data.responseText);
+                        }
+                    });
+                });
+            });
+        </script>
+
+<% include resource %>
+<% include footer %>

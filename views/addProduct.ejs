@@ -1,0 +1,30 @@
+<% include header %>
+<% include menu %>
+
+   <div id="content">
+        <h3>Add Product</h3>
+
+        <form method="POST" action="<%= action %>">
+           <table>
+              <tr><td>Product Number:</td>
+              <td><input type="text" id="productnumber" name ="productnumber" /></td>
+              </tr>
+              <tr><td>Name:</td>
+              <td><input type="text" id="name" name ="name" /></td>
+              </tr>
+              <tr><td>Price:</td>
+              <td><input type="text" id="price" name ="price" /></td>
+              </tr>
+              <tr><td>Supplier ID:</td>
+              <td><input type="text" id="sid" name ="sid" /></td>
+              </tr>
+           </table>
+	   <br />
+           <input type="submit">
+        </form>
+
+   </div>
+
+<% include resource %>
+<% include footer %>
+

@@ -1,0 +1,24 @@
+<% include header %>
+<% include menu %>
+
+   <div id="content">
+        <h3>Add Sales & Territory</h3>
+
+        <form method="POST" action="<%= action %>">
+           <table>
+              <tr><td>Salesperson Name:</td>
+              <td><input type="text" id="name" name ="name" /></td>
+              </tr>
+              <tr><td>Territory:</td>
+              <td><input type="text" id="territory" name ="territory" /></td>
+              </tr>
+           </table>
+	   <br />
+           <input type="submit">
+        </form>
+
+   </div>
+
+<% include resource %>
+<% include footer %>
+

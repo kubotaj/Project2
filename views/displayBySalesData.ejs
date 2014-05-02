@@ -1,0 +1,35 @@
+<% include header %>
+<% include menu %>
+
+   <div id="content">
+
+        <h3>Territory Assigned to Salesperson</h3>
+
+        <% if(rs.length > 0) { %>
+           <table>
+                <tr>
+                <th>Salesperson Name</th>
+                <th>Territory</th>
+                </tr>
+                <% for (var i=0; rs.length > i; i++) { %>
+                   <tr>
+                   <td><%= rs[i].FirstName %></td>
+                   <td><%= rs[i].State %></td>
+                   </tr>
+                   <% } %>
+           </table>
+           <% } else { %>
+           No data found.
+           <% } %>
+
+
+   </div>
+
+<style>
+th{width:100px;}
+td{width:230px;}
+</style>
+
+<% include resource %>
+<% include footer %>
+

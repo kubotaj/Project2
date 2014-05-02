@@ -1,0 +1,55 @@
+<% include header %>
+<% include menu %>
+
+   <div id="content">
+   	<h3>Select Customer Data</h3>
+
+	<div id="customer"></div>
+	<br />
+	<input id="customer-submit" type="submit" />
+	<p id="output"></p>
+
+
+   </div>
+
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      
+      // Once the HTML has loaded, link javascript functions to HTML elements
+      $(document).ready(function () {
+            
+                // Populate Drop Down Menu with customers from MySQL
+                $.ajax({
+                    url: "/customer/select",
+                    type: "POST",
+                    contentType: "application/json",
+                    processData: false,
+                    complete: function (data) {
+                        $('div#customer').html(data.responseText);
+                    }
+                });
+            
+                // Retrieve data from MySQL for a specific user
+                $('#customer-submit').click(function () {
+                    var payload = {
+                        id: $('#customer-list').val(),
+                    };
+                    
+                    $.ajax({
+                        url: "/customer",
+                        type: "POST",
+                        contentType: "application/json",
+                        processData: false,
+                        data: JSON.stringify(payload),
+                        complete: function (data) {
+                            $('#output').html(data.responseText);
+                        }
+                    });
+                });
+            });
+        </script>
+
+<% include resource %>
+<% include footer %>

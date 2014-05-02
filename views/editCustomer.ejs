@@ -1,0 +1,46 @@
+<% include header %>
+<% include menu %>
+
+   <div id="content">
+
+        <h3>Edit Customer</h3>
+	
+        <form method="POST" action="<%= action %>">
+           <table id="customer">
+	      <input type="hidden" id="customerid" name="customerid" value="<%= val[0].CustomerID %>">
+
+              <tr><td>Name:</td>
+              <td><input type="text" id="name" name ="name" value="<%= val[0].Name %>" /></td>
+              </tr>
+              <tr><td>Street:</td>
+              <td><input type="text" id="street" name ="street" value="<%= val[0].Street %>"/></td>
+              </tr>
+              <tr><td>City:</td>
+              <td><input type="text" id="city" name ="city" value="<%= val[0].City %>"/></td>
+              </tr>
+              <tr><td>State:</td>
+              <td><input type="text" id="state" name ="state" value="<%= val[0].State %>"/></td>
+              </tr>
+              <tr><td>Zip:</td>
+              <td><input type="text" id="zip" name ="zip" value="<%= val[0].Zip %>"/></td>
+              </tr>
+              <tr><td>Phone:</td>
+              <td><input type="text" id="phone" name ="phone" value="<%= val[0].Phone %>"/></td>
+              </tr>
+           </table>
+           <br />
+           <input type="submit">
+        </form>
+
+   </div>
+
+
+
+<style>
+th{width:100px;}
+td{width:230px;}
+</style>
+
+<% include resource %>
+<% include footer %>
+

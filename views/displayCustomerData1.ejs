@@ -1,0 +1,45 @@
+<% include header %>
+<% include menu %>
+
+   <div id="content">
+
+        <h3>Search Result</h3>
+	
+	<% if(val.length > 0) { %>
+	   <table>
+		<tr>
+		<th>Name</th>
+		<th>Street</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Zip</th>
+		<th>Phone</th>
+		</tr>
+		<% for (var i=0; val.length > i; i++) { %>
+		   <tr>
+		   <td><%= val[i].Name %></td>
+		   <td><%= val[i].Street %></td>
+		   <td><%= val[i].City %></td>
+		   <td><%= val[i].State %></td>
+		   <td><%= val[i].Zip %></td>
+		   <td><%= val[i].Phone %></td>
+		   </tr>
+		   <% } %>
+	   </table> 
+	   <% } else { %>
+	   No data found.
+	   <% } %>
+
+
+   </div>
+
+
+
+<style>
+th{width:100px;}
+td{width:230px;}
+</style>
+
+<% include resource %>
+<% include footer %>
+

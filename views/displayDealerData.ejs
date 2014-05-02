@@ -1,0 +1,37 @@
+<% include header %>
+<% include menu %>
+
+   <div id="content">
+
+        <h3>Submitted Dealer Data</h3>
+
+    	<table >
+	   <tr><th>Name: </td>
+               <td><%= name %></td>
+           </tr>
+           <tr><th>Street: </td>
+               <td><%= street %></td>
+           </tr>
+           <tr><th>City: </td>
+               <td><%= city %></td>
+           </tr>
+           <tr><th>State: </th>
+               <td><%= state %></td>
+           </tr>
+           <tr><th>Zip: </td>
+               <td><%= zip %></td>
+           </tr>
+	   <tr><th>Phone: </td>
+               <td><%= phone %></td>
+	   </tr>
+    </table>
+   </div>
+
+<style>
+th{width:100px;}
+td{width:230px;}
+</style>
+
+<% include resource %>
+<% include footer %>
+

@@ -1,0 +1,31 @@
+<% include header %>
+<% include menu %>
+
+   <div id="content">
+
+        <h3>Submitted Product Data</h3>
+
+    	<table >
+	   <tr><th>Product Number: </td>
+               <td><%= productnumber %></td>
+           </tr>
+	   <tr><th>Name: </td>
+               <td><%= name %></td>
+           </tr>
+           <tr><th>Price: </td>
+               <td><%= price %></td>
+           </tr>
+           <tr><th>Supplier ID: </td>
+               <td><%= sid %></td>
+           </tr>
+    </table>
+   </div>
+
+<style>
+th{width:100px;}
+td{width:230px;}
+</style>
+
+<% include resource %>
+<% include footer %>
+

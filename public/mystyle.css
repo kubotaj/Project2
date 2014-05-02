@@ -1,0 +1,185 @@
+#container
+{	
+    background-color:#FAFAFA;
+    width:700px;
+}
+
+img.logo
+{
+    vertical-align:middle;
+}
+
+#header1
+{
+    height:60px;
+    color:#6699FF;
+    font-size:large;
+}
+
+#header1-1
+{
+    padding-right:10px;
+    text-align:right;
+    font-size:small;
+}
+
+#header2
+{
+    border:0px solid;
+    border-radius:5px;
+    background-color:#E6E6E6;
+    height:100px;
+    text-align:center;
+    font-size:xx-large;
+    background-image:url('headimg.jpg')
+}
+
+#header3
+{
+    height:25px;
+}
+
+
+#menu
+{
+    border:0px solid;
+    border-radius:5px;
+    background-color:#E0ECF8;
+    height:550px;
+    width:150px;
+    float:left;
+}
+
+.menu1
+{
+    border:0px solid;
+    border-radius:5px;
+    background-color:#6699FF;
+    hight:20px:
+    width:150px;
+    color:white;
+    text-align:center;
+    font-weight:bold;
+    padding:10px;
+}
+
+.menu2
+{
+    border:0px solid;
+    border-radius:5px;
+    border:1px solid;    
+    text-align:center;
+}
+
+.menu3
+{
+    text-align:center;
+    font-size:small;
+}
+
+#content
+{
+    background-color:#FAFAFA;
+    height:500px;
+    width:350px;
+    float:left;
+    padding:25px 25px
+	
+}
+
+#resource
+{
+    border:0px solid;
+    border-radius:10px;
+    background-color:#FAFAFA;
+    height:550px;
+    width:150px;
+    float:left;
+}
+
+.resource1
+{
+    border:0px solid;
+    border-radius:5px;
+    background-color:#FAFAFA;
+    hight:20px;
+    width:130px;
+    text-align:center;
+    font-weight:bold;
+    padding:10px;
+}
+
+.resource2
+{
+    border:0px solid;
+    border-radius:5px;
+    border:1px solid;
+    text-align:center;
+}
+
+.resource3
+{
+    padding:5px;
+    font-size:small;
+}
+
+#footer1
+{
+    clear:both;
+    background-color:#FAFAFA;
+    height:25px;
+    width:700px;
+}
+
+#footer2
+{	
+    border:0px solid;
+    border-radius:10px;
+    background-color:#E6E6E6;
+    height:50px;
+    width:700px;
+    clear:both;
+    text-align:center;
+    font-size:small;
+    line-height:50px;
+}    
+
+
+div.title
+{
+    font-size:18px;
+    font-style:arial;
+    padding-bottom:20px;
+}
+
+table.users
+{
+    border-collapse:collapse;
+}
+
+table users td
+{
+    border:solid 1px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:5px;
+}
+
+table.users .rightalign
+{
+text-align:right;
+}
+
+table.users th
+{
+    border-bottom:solid 1px #999;
+    padding-left:10px;
+    padding-right:10px;
+    text-align:left;
+}
+
+table, th, td
+{
+    border:solid 1px;
+    padding: 5px, 5px;
+}

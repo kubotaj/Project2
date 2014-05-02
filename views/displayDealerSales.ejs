@@ -1,0 +1,43 @@
+<% include header %>
+<% include menu %>
+
+   <div id="content">
+
+        <h3>Total Sales via Dealer</h3>
+<div id="table">
+	<% if (rs.length > 0) { %>
+    	<table >
+	   <tr><th>Dealer Name</th>
+	       <th>Sales Total</th>
+	   </tr>
+	       <% for (var i=0; rs.length > i; i++) { %>
+	   <tr>
+	       <td> <%= rs[i].DealerName %> </td>
+	       <td> <%= rs[i].Total %> </td>
+	   </tr>
+		<% } %>
+	</table>
+
+	</div>
+
+	<% } else { %>
+	   Data not available.
+	<% } %>
+
+
+	</div>
+<style>
+th{width:100px;}
+td{width:230px;}
+</style>
+
+<style>
+#table
+{
+
+}
+</style>
+
+<% include resource %>
+<% include footer %>
+

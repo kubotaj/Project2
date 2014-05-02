@@ -1,0 +1,61 @@
+<% include header %>
+<% include menu %>
+
+   <div id="content">
+
+        <h3>Sales Order List</h3>
+<div id="table">
+	<% if (rs.length > 0) { %>
+    	<table >
+	   <tr><th>SO#</th>
+	       <th>Sales</th>
+	       <th>Customer</th>
+	       <th>Dealer</th>
+	       <th>Forwarder</th>
+	       <th>Supplier</th>
+	       <th>Product</th>
+	       <th>Territory</th>
+	       <th>Price</th>
+	       <th>Qty</th>
+	       <th>Subtotal</th>
+	   </tr>
+	       <% for (var i=0; rs.length > i; i++) { %>
+	   <tr>
+	       <td> <%= rs[i].SONumber %> </td>
+	       <td> <%= rs[i].Sales %> </td>
+	       <td> <%= rs[i].Customer %> </td>
+	       <td> <%= rs[i].Dealer %> </td>
+	       <td> <%= rs[i].Forwarder %> </td>
+	       <td> <%= rs[i].Supplier %> </td>
+	       <td> <%= rs[i].Territory %> </td>
+	       <td> <%= rs[i].Product %> </td>
+	       <td> <%= rs[i].Price %> </td>
+	       <td> <%= rs[i].Qty %> </td>
+	       <td> <%= rs[i].Subtotal %> </td>
+	   </tr>
+		<% } %>
+	</table>
+
+	</div>
+
+	<% } else { %>
+	   Data not available.
+	<% } %>
+
+
+	</div>
+<style>
+th{width:100px;}
+td{width:230px;}
+</style>
+
+<style>
+#table
+{
+font-size:xx-small;
+}
+</style>
+
+
+<% include footer %>
+
